@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonikDepot | API Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&family=Inter:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #080212;
+            --purple-main: #8e2de2;
+            --purple-alt: #4a00e0;
+            --glass: rgba(255, 255, 255, 0.02);
+            --border: rgba(142, 45, 226, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at top right, rgba(74, 0, 224, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(142, 45, 226, 0.1), transparent 40%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .premium-container {
+            background: var(--glass);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid var(--border);
+            padding: 5rem 7rem;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+
+        /* Basıklığı gideren, ferah ve uzun başlık */
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 100; /* Çok ince, zarif görünüm */
+            letter-spacing: 18px; /* Harfler arası geniş boşluk */
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ffffff, #b06ab3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-right: -18px; /* Letter-spacing dengeleyici */
+        }
+
+        .api-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.75rem;
+            letter-spacing: 5px;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .status-pulse {
+            width: 6px;
+            height: 6px;
+            background: #a18cd1;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #a18cd1;
+            animation: pulse 2.5s infinite;
+        }
+
+        /* Yapımcılar Bölümü - Minimalist */
+        .credits {
+            margin-top: 4rem;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+        }
+
+        .credits b {
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 600;
+            margin: 0 4px;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.4; transform: scale(0.9); }
+        }
+
+        /* Dekoratif Mor Işıklar */
+        .orb {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(var(--purple-main), var(--purple-alt));
+            filter: blur(180px);
+            border-radius: 50%;
+            opacity: 0.12;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="orb"></div>
+
+    <main class="premium-container">
+        <h1>MONIKDEPOT</h1>
+        
+        <div class="api-info">
+            <div class="status-pulse"></div>
+            API Service
+        </div>
+
+        <div class="credits">
+            İndirme Linki: <b>https://monikdepot.netlify.app</b> — <b></b>
+        </div>
+    </main>
+</body>
+</html>
